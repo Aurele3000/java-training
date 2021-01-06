@@ -8,6 +8,8 @@ import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.xml.stream.events.StartElement;
+
 public class Series1 {
 
 	private Series1() {
@@ -146,17 +148,13 @@ public class Series1 {
 
 	public static int[] insertElementInTheMiddleOfAnArray(int[] array, int element) {
 		// 9
-		List<Integer> listBis = new ArrayList<>();
-		for (int num : array) {
-			listBis.add(num);
-		}
-		int middleArray = Math.round(array.length / 2);
-		listBis.add(middleArray, element);
-		int[] newArray = new int[listBis.size()];
-		for (int i = 0; i < newArray.length; i++) {
-			newArray[i] = listBis.get(i);
-		}
-		return newArray;
+		/*
+		 * List<Integer> listBis = new ArrayList<>(); for (int num : array) {
+		 * listBis.add(num); } int middleArray = Math.round(array.length / 2);
+		 * listBis.add(middleArray, element); int[] newArray = new int[listBis.size()];
+		 * for (int i = 0; i < newArray.length; i++) { newArray[i] = listBis.get(i); }
+		 * return newArray;
+		 */
 	}
 
 	public static String shortestWord(String text) {
@@ -252,7 +250,34 @@ public class Series1 {
 
 	public static boolean checkIfStringStartsWithConsonant(String word) {
 		// 17
-		return false;
+		if(word.startsWith("a")) {
+			return false;	
+		} else if (word.startsWith("e")) {
+			return false;
+		} else if (word.startsWith("i")) {
+			return false;
+		} else if (word.startsWith("o")) {
+			return false;
+		} else if (word.startsWith("u")) {
+			return false;
+		} else if (word.startsWith("y")) {
+			return false;
+		} else if (word.startsWith("A")) {
+			return false;
+		} else if (word.startsWith("E")) {
+			return false;
+		} else if (word.startsWith("I")) {
+			return false;
+		} else if (word.startsWith("O")) {
+			return false;
+		} else if (word.startsWith("U")) {
+			return false;
+		} else if (word.startsWith("Y")) {
+			return false;
+		} else {
+			return true;
+		}
+						
 	}
 
 	public static String getDomainName(String email) {
