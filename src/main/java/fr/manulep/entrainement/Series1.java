@@ -1,6 +1,5 @@
 package fr.manulep.entrainement;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 import com.google.common.primitives.Chars;
@@ -12,12 +11,12 @@ public class Series1 {
 	}
 
 	public static String helloWorld(String name) {
-		//1
+		// 1
 		if ((name == null) || (name == "")) {
 			return "Hello World";
-			
-		} else 
-		    return "Hello " + name;			
+
+		} else
+			return "Hello " + name;
 	}
 
 	public static String[] removeNullElements(String[] array) {
@@ -33,7 +32,13 @@ public class Series1 {
 
 	public static int[] addElementToBeginning(int[] array, int element) {
 		// 3
-		return null;
+		int[] result = new int[(array.length + 1)];
+		result[0] = element;
+		for (int i = 0; i < array.length; i++) {
+			result[i + 1] = array[i];
+		}
+		return result;
+
 	}
 
 	public static int[] allElementsExceptFirstThree(int[] array) {
@@ -48,7 +53,7 @@ public class Series1 {
 
 	public static String[] selectElementsStartingWithA(String[] array) {
 		// 6
-		
+
 		int c = 0;
 
 		String[] motCommenceAvecA;
@@ -76,7 +81,7 @@ public class Series1 {
 
 	public static String[] selectElementsStartingWithVowel(String[] array) {
 		// 7
-		
+
 		int c = 0;
 
 		String[] nomCommenceAvecVoyelle;
@@ -115,7 +120,7 @@ public class Series1 {
 
 	public static String[] reverseOrderInArray(String[] array) {
 		// 8
-		
+
 		for (int i = 0; i < array.length / 2; i++) {
 			String fruits = array[i];
 			array[i] = array[array.length - 1 - i];
@@ -132,7 +137,7 @@ public class Series1 {
 
 	public static String shortestWord(String text) {
 		// 10
-		
+
 		String word = "", small = "";
 		String[] words = new String[100];
 		int length = 0;
@@ -164,7 +169,7 @@ public class Series1 {
 
 	public static String removeCapitals(String text) {
 		// 11
-		
+
 		String textWithoutCapitals = "";
 
 		for (int i = 0; i < text.length(); i++) {
@@ -182,13 +187,13 @@ public class Series1 {
 
 	public static long addingTwoNumbers(long number1, long number2) {
 		// 12
-		
+
 		return number1 + number2;
 	}
 
 	public static long addingThreeNumbers(long number1, long number2, long number3) {
 		// 13
-		
+
 		return number1 + number2 + number3;
 	}
 
@@ -199,7 +204,7 @@ public class Series1 {
 
 	public static float makeNegative(float number) {
 		// 15
-		
+
 		float negativeNumber = 0;
 		if (number > 0) {
 			negativeNumber = 0 - number;
@@ -227,7 +232,7 @@ public class Series1 {
 
 	public static int[] letterPosition(String name) {
 		// 19
-		
+
 		String lowerCaseName = name.toLowerCase();
 
 		char[] alphabet = { ' ', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q',
@@ -249,7 +254,7 @@ public class Series1 {
 
 	public static boolean isPeer(int number) {
 		// 20
-		
+
 		int nombre = number % 2;
 		if (nombre == 0) {
 			return true;
