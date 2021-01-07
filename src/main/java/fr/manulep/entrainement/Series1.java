@@ -282,7 +282,10 @@ public class Series1 {
 
 	public static String getDomainName(String email) {
 		// 18
-		return null;
+		String[] split = email.split(".com");
+		split = split[0].split("@");
+		
+		return split[1];
 	}
 
 	public static int[] letterPosition(String name) {
